@@ -611,6 +611,15 @@
             color: var(--lime);
         }
 
+        .ai-intro {
+            max-width: 640px;
+            color: var(--muted);
+            font-size: 0.95rem;
+            line-height: 1.75;
+            margin-top: -1.6rem;
+            margin-bottom: 2.5rem;
+        }
+
         /* ============================================================
    ABOUT
 ============================================================ */
@@ -769,6 +778,23 @@
             font-size: 0.65rem;
             font-family: 'DM Mono', monospace;
             color: var(--lime);
+        }
+
+        .proj-link-line {
+            margin-top: 1rem;
+        }
+
+        .proj-link-line a {
+            font-size: 0.8rem;
+            font-family: 'DM Mono', monospace;
+            color: var(--lime);
+            text-decoration: none;
+            border-bottom: 1px solid rgba(184, 240, 60, 0.3);
+            padding-bottom: 2px;
+        }
+
+        .proj-link-line a:hover {
+            border-bottom-color: var(--lime);
         }
 
         .proj-arrow {
@@ -1201,7 +1227,7 @@
                     <div class="stat-l">Semester &middot; UDE</div>
                 </div>
                 <div class="stat">
-                    <div class="stat-n">3+</div>
+                    <div class="stat-n">4+</div>
                     <div class="stat-l">Projects Done</div>
                 </div>
                 <div class="stat">
@@ -1273,6 +1299,30 @@
                 <div class="proj-arrow">&#8599;</div>
             </div>
 
+            <div class="proj-card">
+                <div class="proj-topline"></div>
+                <div class="proj-num">04 / PROJECT</div>
+                <div class="proj-icon">&#127829;</div>
+                <div class="proj-title">Milano Pizzeria — Restaurant Platform</div>
+                <div class="proj-desc">Full-stack restaurant platform built for a real client. Online ordering,
+                    WhatsApp API-based table reservations, and Stripe payments — a production system currently
+                    serving live customers.</div>
+                <div class="proj-tags">
+                    <span class="ptag">Next.js</span>
+                    <span class="ptag">TypeScript</span>
+                    <span class="ptag">PostgreSQL</span>
+                    <span class="ptag">Stripe</span>
+                    <span class="ptag">WhatsApp API</span>
+                </div>
+                <div class="proj-link-line">
+                    <a href="https://milano-pizzeria-duisburg.dev/" target="_blank" rel="noopener">
+                        Visit Website &#8599;
+                    </a>
+                </div>
+                <a class="proj-arrow" href="https://milano-pizzeria-duisburg.dev/" target="_blank"
+                    rel="noopener" aria-label="View live site">&#8599;</a>
+            </div>
+
         </div>
     </section>
 
@@ -1333,6 +1383,44 @@
                 <div class="tech-name">JavaScript</div>
                 <div class="tech-lvl">Intermediate</div>
             </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════
+     AI-ASSISTED DEVELOPMENT
+══════════════════════════════════ -->
+    <section class="section section-alt reveal" id="ai-workflow">
+        <div class="sec-eyebrow">Modern Workflow</div>
+        <h2 class="sec-title">AI-Assisted<br><em>Development</em></h2>
+        <div class="ai-intro">Comfortable working alongside AI tools as part of a modern engineering
+            workflow — using them deliberately to move faster, debug smarter, and automate the repetitive
+            parts of building software.</div>
+        <div class="proj-grid ai-grid">
+
+            <div class="proj-card">
+                <div class="proj-topline"></div>
+                <div class="proj-icon">&#129504;</div>
+                <div class="proj-title">Claude AI &amp; Skills</div>
+                <div class="proj-desc">Hands-on experience with Claude, including building and using custom
+                    Skills to structure repeatable, reliable AI-assisted workflows.</div>
+            </div>
+
+            <div class="proj-card">
+                <div class="proj-topline"></div>
+                <div class="proj-icon">&#9997;&#65039;</div>
+                <div class="proj-title">Prompt Engineering</div>
+                <div class="proj-desc">Writing clear, structured prompts to get accurate, production-ready
+                    output — from code generation to debugging and documentation.</div>
+            </div>
+
+            <div class="proj-card">
+                <div class="proj-topline"></div>
+                <div class="proj-icon">&#9881;&#65039;</div>
+                <div class="proj-title">Workflow Automation</div>
+                <div class="proj-desc">Using AI tools to automate repetitive development tasks, speed up
+                    code review, and streamline day-to-day engineering work.</div>
+            </div>
+
         </div>
     </section>
 
