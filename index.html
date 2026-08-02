@@ -200,18 +200,72 @@ nav.scrolled { padding: 0.8rem 6%; background: rgba(5, 5, 5, 0.95); }
 .magnetic { will-change: transform; }
 .magnetic.magnet-reset { transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1); }
 
-.quote-section {
-    padding: 5rem 6%; text-align: center; max-width: 900px; margin: 0 auto;
+/* Terminal Philosophy Section */
+.sr-only {
+    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
 }
-.quote-text {
-    font-family: 'Playfair Display', serif; font-size: clamp(1.3rem, 2.6vw, 2rem);
-    font-weight: 400; font-style: italic; line-height: 1.6; color: var(--text);
+.term-section {
+    padding: 5rem 6%; display: flex; justify-content: center;
 }
-.quote-text em { color: var(--lime); font-style: italic; }
-.quote-attr {
-    margin-top: 1.5rem; font-family: 'DM Mono', monospace; font-size: 0.8rem;
-    color: var(--muted); letter-spacing: 0.05em;
+.term-frame {
+    position: relative; width: 100%; max-width: 720px; border-radius: 16px;
+    padding: 2px; overflow: hidden;
+    opacity: 0; transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
 }
+.term-frame.in-view { opacity: 1; transform: translateY(0); }
+.term-frame::before {
+    content: ''; position: absolute; inset: -60%;
+    background: conic-gradient(from 0deg,
+        transparent 0deg, var(--lime) 40deg, transparent 100deg,
+        transparent 220deg, var(--cyan) 280deg, transparent 340deg);
+    animation: term-rotate 6s linear infinite paused;
+}
+.term-frame.glow::before { animation-play-state: running; }
+@keyframes term-rotate { to { transform: rotate(360deg); } }
+.term-window {
+    position: relative; z-index: 1; width: 100%; border-radius: 14px; overflow: hidden;
+    background: #0a0a0a; border: 1px solid var(--border);
+    box-shadow: 0 30px 80px rgba(0,0,0,0.5);
+    transition: box-shadow 1.5s ease;
+}
+.term-window.glow {
+    box-shadow: 0 0 40px rgba(184,240,60,0.1), 0 30px 80px rgba(0,0,0,0.6);
+}
+.term-bar {
+    display: flex; align-items: center; gap: 0.6rem;
+    padding: 0.8rem 1.1rem; background: #131313; border-bottom: 1px solid var(--border);
+}
+.term-dots { display: flex; gap: 0.4rem; }
+.term-dots span {
+    width: 11px; height: 11px; border-radius: 50%; display: inline-block;
+}
+.term-dots span:nth-child(1) { background: #ff5f56; }
+.term-dots span:nth-child(2) { background: #ffbd2e; }
+.term-dots span:nth-child(3) { background: #27c93f; }
+.term-title {
+    flex: 1; text-align: center; font-family: 'DM Mono', monospace;
+    font-size: 0.72rem; color: var(--muted); margin-right: 2.5rem;
+}
+.term-body {
+    padding: 1.8rem 1.6rem 2.2rem; min-height: 300px;
+}
+.term-lines {
+    font-family: 'DM Mono', monospace; font-size: clamp(0.8rem, 1.6vw, 0.95rem);
+    line-height: 1.9; color: #d5d5d5; white-space: pre-wrap; word-break: break-word;
+    margin: 0;
+}
+.term-lines .t-cmd { color: var(--lime); }
+.term-lines .t-out { color: #8ab4f8; }
+.term-lines .t-ok { color: var(--lime); }
+.term-lines .t-mute { color: var(--muted); }
+.term-cursor {
+    display: inline-block; width: 8px; height: 1.1em; background: var(--lime);
+    vertical-align: text-bottom; margin-left: 2px;
+    animation: term-blink 0.9s step-end infinite;
+}
+@keyframes term-blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
 
 /* Command Palette */
 .cmdk-overlay {
@@ -266,6 +320,8 @@ nav.scrolled { padding: 0.8rem 6%; background: rgba(5, 5, 5, 0.95); }
 }
 @media(max-width: 900px) {
     .cmdk-hint { display: none; }
+    .term-body { padding: 1.2rem 1rem 1.6rem; min-height: 230px; }
+    .term-title { font-size: 0.62rem; margin-right: 1.5rem; }
 }
 
 .contact-row { display: flex; gap: 1.5rem; flex-wrap: wrap; }
@@ -627,10 +683,20 @@ footer p { color: var(--muted); font-size: 0.8rem; }
     </div>
 </section>
 
-<!-- Quote / Philosophy -->
-<section class="quote-section">
-    <p class="quote-text">&#8220;Code that's easy to delete is better than code that's clever.<br>I'd rather ship something <em>simple and correct</em> than something impressive and fragile.&#8221;</p>
-    <div class="quote-attr">— Mohamad Ali Choumar</div>
+<!-- Terminal Philosophy -->
+<section class="term-section" id="terminal">
+    <div class="term-frame" id="termFrame">
+        <div class="term-window tilt-card" id="termWindow">
+            <div class="term-bar">
+                <div class="term-dots"><span></span><span></span><span></span></div>
+                <div class="term-title">mohamad@portfolio — zsh</div>
+            </div>
+            <div class="term-body">
+                <p class="sr-only">Terminal message: whoami — mohamad-ali, software engineer. life --undo: command not found, no Ctrl+Z in real life. git add lessons, git commit "grow", git push --always: every version better than the last. ls production: milano-pizzeria-duisburg.dev, live, serving real customers.</p>
+                <pre class="term-lines" id="termLines" aria-hidden="true"></pre>
+            </div>
+        </div>
+    </div>
 </section>
 
 <!-- Tech Stack -->
@@ -897,6 +963,81 @@ document.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowUp') { e.preventDefault(); setCmdkActive(Math.max(cmdkActiveIndex - 1, 0)); }
     if (e.key === 'Enter' && cmdkFiltered[cmdkActiveIndex]) { cmdkFiltered[cmdkActiveIndex].action(); }
 });
+
+/* ---------- 6. TERMINAL TYPEWRITER ---------- */
+const termWindow = document.getElementById('termWindow');
+const termFrame = document.getElementById('termFrame');
+const termLines = document.getElementById('termLines');
+
+const termScript = [
+    { text: '$ whoami', type: 'cmd', pause: 300 },
+    { text: 'mohamad-ali — software engineer', type: 'out', pause: 500 },
+    { text: '', type: 'break', pause: 200 },
+    { text: '$ life --undo', type: 'cmd', pause: 300 },
+    { text: 'zsh: command not found — no Ctrl+Z in real life', type: 'mute', pause: 600 },
+    { text: '', type: 'break', pause: 200 },
+    { text: '$ git add lessons/', type: 'cmd', pause: 250 },
+    { text: '$ git commit -m "grow"', type: 'cmd', pause: 250 },
+    { text: '$ git push --always', type: 'cmd', pause: 500 },
+    { text: '✓ every version better than the last', type: 'ok', pause: 400 },
+    { text: '', type: 'break', pause: 200 },
+    { text: '$ ls production/', type: 'cmd', pause: 300 },
+    { text: 'milano-pizzeria-duisburg.dev  ✓ live, serving real customers', type: 'out', pause: 0 },
+];
+
+let termStarted = false;
+
+function typeTerminal() {
+    if (termStarted) return;
+    termStarted = true;
+    termFrame.classList.add('in-view');
+    setTimeout(() => { termFrame.classList.add('glow'); termWindow.classList.add('glow'); }, 400);
+
+    let lineIndex = 0;
+
+    function typeLine() {
+        if (lineIndex >= termScript.length) {
+            const cursor = document.createElement('span');
+            cursor.className = 'term-cursor';
+            termLines.appendChild(cursor);
+            return;
+        }
+        const line = termScript[lineIndex];
+
+        if (line.type === 'break') {
+            termLines.appendChild(document.createTextNode('\n'));
+            lineIndex++;
+            setTimeout(typeLine, line.pause);
+            return;
+        }
+
+        const span = document.createElement('span');
+        span.className = 't-' + line.type;
+        termLines.appendChild(span);
+
+        let charIndex = 0;
+        function typeChar() {
+            if (charIndex < line.text.length) {
+                span.textContent += line.text[charIndex];
+                charIndex++;
+                setTimeout(typeChar, line.type === 'cmd' ? 32 : 18);
+            } else {
+                termLines.appendChild(document.createTextNode('\n'));
+                lineIndex++;
+                setTimeout(typeLine, line.pause);
+            }
+        }
+        typeChar();
+    }
+    typeLine();
+}
+
+const termObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) typeTerminal();
+    });
+}, { threshold: 0.4 });
+termObserver.observe(termFrame);
 
 /* ---------- UTILS ---------- */
 function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('open'); }
