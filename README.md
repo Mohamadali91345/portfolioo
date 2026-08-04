@@ -10,21 +10,37 @@ This website showcases my projects, technical skills, and experience as a Softwa
 
 👉 https://choumar.is-a.dev
 
-## 🚀 Technologies
+## ✨ Features
 
-- HTML5
-- CSS3
-- JavaScript (ES6+)
-- React
-- Git & GitHub
-- Responsive Web Design
+- Responsive Design
+- Modern UI/UX
+- Project Showcase
+- Skills Overview
+- Contact Section
+- Custom Domain
+  
+
+## 🛠 Tech Stack
+
+<p align="left">
+  <img src="https://skillicons.dev/icons?i=html,css,js,react,git,github,vscode,npm" />
+</p>
 
 ## 📂 Featured Projects
 
-- Personal Portfolio
-- Milano Pizzeria Website
-- University Projects
-- Future Open Source Projects
+### 🍕 Milano Pizzeria
+
+Modern restaurant website for a real restaurant in Germany.
+
+🌐 https://milano-pizzeria-duisburg.dev
+
+---
+
+### 💼 Personal Portfolio
+
+Modern portfolio showcasing projects, skills and experience.
+
+🌐 https://choumar.is-a.dev
 
 ## 🎯 Goals
 
