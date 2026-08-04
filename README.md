@@ -37,7 +37,7 @@ This website showcases my projects, technical skills, and experience as a Softwa
 
 Portfolio: https://choumar.is-a.dev
 
-GitHub: https://github.com/Mohamadali91345
+GitHub: https://github.com/MAliChoumar
 
 ---
 
