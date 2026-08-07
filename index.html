@@ -3,52 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Mohamad Ali Choumar — Software Engineering student at University of Duisburg-Essen. Full-stack developer building production systems with Java, Spring Boot & Next.js. Open to Werkstudent & Internship positions.">
+<meta name="description" content="Mohamad Ali Choumar — B.Sc. Software Engineering Student at University of Duisburg-Essen. Full-Stack Enthusiast. Open to Werkstudent & Internship positions.">
 <meta name="keywords" content="Mohamad Ali Choumar, Software Engineer, Full-Stack, Java, Spring Boot, Backend, Cloud, Werkstudent, Intern, Duisburg, Essen">
 <meta name="author" content="Mohamad Ali Choumar">
+<meta property="og:title" content="Mohamad Ali Choumar — Software Engineer">
+<meta property="og:description" content="Full-Stack Enthusiast | B.Sc. Software Engineering @ UDE | Open to Werkstudent positions">
+<link rel="canonical" href="https://choumar.is-a.dev/">
+<meta property="og:url" content="https://choumar.is-a.dev/">
+<meta property="og:image" content="https://choumar.is-a.dev/assets/og-preview.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://choumar.is-a.dev/assets/og-preview.png">
 <meta name="theme-color" content="#b8f03c">
-<link rel="canonical" href="https://choumar.is-a.dev/" />
-<title>Mohamad Ali Choumar — Software Engineer Portfolio</title>
-
-<!-- Open Graph -->
-<meta property="og:type" content="website" />
-<meta
-  property="og:title"
-  content="Mohamad Ali Choumar | Software Engineer Portfolio"
-/>
-<meta
-  property="og:description"
-  content="Software Engineering portfolio featuring full-stack projects, modern web development, AI-assisted workflows, and scalable application architecture."
-/>
-<meta
-  property="og:url"
-  content="https://choumar.is-a.dev/"
-/>
-<meta
-  property="og:image"
-  content="https://choumar.is-a.dev/assets/og-preview.png"
-/>
-<meta
-  property="og:image:alt"
-  content="Mohamad Ali Choumar software engineering portfolio preview"
-/>
-<meta property="og:site_name" content="Mohamad Ali Choumar Portfolio" />
-<meta property="og:locale" content="en_US" />
-
-<!-- X / Twitter -->
-<meta name="twitter:card" content="summary_large_image" />
-<meta
-  name="twitter:title"
-  content="Mohamad Ali Choumar | Software Engineer Portfolio"
-/>
-<meta
-  name="twitter:description"
-  content="Software Engineering portfolio featuring full-stack projects, modern web development, AI-assisted workflows, and scalable application architecture."
-/>
-<meta
-  name="twitter:image"
-  content="https://choumar.is-a.dev/assets/og-preview.png"
-/>
+<title>Mohamad Ali Choumar — Software Engineer</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -876,6 +844,18 @@ footer p { color: var(--muted); font-size: 0.8rem; }
 .scroll-top.show { opacity: 1; pointer-events: auto; transform: translateY(0); }
 .scroll-top:hover { transform: translateY(-3px); box-shadow: var(--glow); }
 
+/* Toast notification (replaces native alert()) */
+.toast {
+    position: fixed; bottom: 2rem; left: 50%; z-index: 3000;
+    transform: translate(-50%, 20px); opacity: 0; pointer-events: none;
+    background: #0d0d0d; border: 1px solid var(--lime); border-radius: 10px;
+    padding: 0.85rem 1.4rem; color: var(--text); font-size: 0.88rem;
+    font-family: 'DM Mono', monospace; box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    max-width: 90vw; text-align: center;
+}
+.toast.show { opacity: 1; transform: translate(-50%, 0); }
+
 /* ============================================================
    ARABIC RTL
    ============================================================ */
@@ -1454,8 +1434,6 @@ body[data-lang="ar"] .footer-links a { margin-left: 0; margin-right: 1.5rem; }
     </div>
 </section>
 
-<!-- TERMINAL BACKUP / REMOVED -->
-
 <!-- COMMAND PALETTE OVERLAY -->
 <div class="cmdk-overlay" id="cmdkOverlay">
     <div class="cmdk-box">
@@ -1486,7 +1464,7 @@ body[data-lang="ar"] .footer-links a { margin-left: 0; margin-right: 1.5rem; }
                 <button class="qr-tab" data-qr="linkedin" data-i18n="qr_tab_linkedin">LinkedIn</button>
             </div>
             <div class="qr-canvas" id="qrcode"></div>
-            <div class="qr-url" id="qrUrl">🔗 mohamadali91345.github.io/portfolioo</div>
+            <div class="qr-url" id="qrUrl">🔗 choumar.is-a.dev</div>
             <button class="dl-btn" onclick="downloadQR()">↓ <span data-i18n="qr_download">Download QR Code</span></button>
         </div>
         <div class="qr-info">
@@ -1494,7 +1472,7 @@ body[data-lang="ar"] .footer-links a { margin-left: 0; margin-right: 1.5rem; }
             <p data-i18n="qr_info_p1">Scan the QR code with your phone camera — no app needed. Works on any device: mobile, tablet, or laptop.</p>
             <p data-i18n="qr_info_p2">Share it on your CV, business card, or presentations for instant access to your work.</p>
             <div class="btn-row" style="margin-top:1.5rem;margin-bottom:0;">
-                <a href="https://mohamadali91345.github.io/portfolioo/" target="_blank" rel="noopener" class="btn-main magnetic"><span>Live Site ↗</span></a>
+                <a href="https://choumar.is-a.dev/" target="_blank" rel="noopener" class="btn-main magnetic"><span>Live Site ↗</span></a>
                 <a href="mailto:choumarmohamadali@gmail.com" class="btn-ghost magnetic"><span>✉ Email Me</span></a>
             </div>
         </div>
@@ -1517,6 +1495,7 @@ body[data-lang="ar"] .footer-links a { margin-left: 0; margin-right: 1.5rem; }
 
 <!-- SCROLL TO TOP -->
 <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">↑</button>
+<div class="toast" id="toast"></div>
 
 <!-- JAVASCRIPT -->
 <script>
@@ -1734,10 +1713,15 @@ try {
     if (cursorDot && cursorRing && window.matchMedia('(min-width: 901px)').matches) {
         document.body.classList.add('custom-cursor-on');
 
+        let dotRafId = null;
         document.addEventListener('mousemove', (e) => {
             mouseX = e.clientX;
             mouseY = e.clientY;
-            cursorDot.style.transform = `translate(${mouseX}px, ${mouseY}px) translate(-50%, -50%)`;
+            if (dotRafId) return;
+            dotRafId = requestAnimationFrame(() => {
+                cursorDot.style.transform = `translate(${mouseX}px, ${mouseY}px) translate(-50%, -50%)`;
+                dotRafId = null;
+            });
         });
 
         function animateRing() {
@@ -1770,11 +1754,29 @@ try {
 /* ============================================================
    SCROLL PROGRESS
    ============================================================ */
-window.addEventListener('scroll', () => {
+/* ============================================================
+   SCROLL PROGRESS + NAVBAR + SCROLL-TOP (merged, cached, rAF-throttled)
+   ============================================================ */
+const scrollProgressEl = document.getElementById('scrollProgress');
+const navbarEl = document.getElementById('navbar');
+const scrollTopBtn = document.getElementById('scrollTop');
+let scrollRafId = null;
+
+function handleScroll() {
     const winHeight = document.documentElement.scrollHeight - window.innerHeight;
-    const progress = (window.scrollY / winHeight) * 100;
-    document.getElementById('scrollProgress').style.width = progress + '%';
-});
+    const progress = winHeight > 0 ? (window.scrollY / winHeight) * 100 : 0;
+    scrollProgressEl.style.width = progress + '%';
+    navbarEl.classList.toggle('scrolled', window.scrollY > 50);
+    scrollTopBtn.classList.toggle('show', window.scrollY > 400);
+}
+
+window.addEventListener('scroll', () => {
+    if (scrollRafId) return;
+    scrollRafId = requestAnimationFrame(() => {
+        handleScroll();
+        scrollRafId = null;
+    });
+}, { passive: true });
 
 /* ============================================================
    VANTA BACKGROUND
@@ -1868,9 +1870,9 @@ const cmdkActions = [
     { icon: '🔗', label: 'Go to Share / QR', key: 'share', action: () => scrollToId('share') },
     { icon: '📄', label: 'Download CV', key: 'cv', action: () => { const a = document.createElement('a'); a.href = 'assets/CV.pdf'; a.download = 'Mohamad-Ali-Choumar-CV.pdf'; a.click(); } },
     { icon: '✉️', label: 'Copy Email', key: 'email', action: () => { navigator.clipboard?.writeText('choumarmohamadali@gmail.com'); closeCmdk(); } },
-    { icon: '🔗', label: 'Open GitHub', key: 'github', action: () => window.open('https://github.com/mohamadali91345', '_blank') },
-    { icon: '🔗', label: 'Open LinkedIn', key: 'linkedin', action: () => window.open('https://www.linkedin.com/in/mohamad-ali-choumar-b425693a9', '_blank') },
-    { icon: '🍕', label: 'Visit Milano Pizzeria', key: 'milano', action: () => window.open('https://milano-pizzeria-duisburg.dev/', '_blank') },
+    { icon: '🔗', label: 'Open GitHub', key: 'github', action: () => window.open('https://github.com/mohamadali91345', '_blank', 'noopener,noreferrer') },
+    { icon: '🔗', label: 'Open LinkedIn', key: 'linkedin', action: () => window.open('https://www.linkedin.com/in/mohamad-ali-choumar-b425693a9', '_blank', 'noopener,noreferrer') },
+    { icon: '🍕', label: 'Visit Milano Pizzeria', key: 'milano', action: () => window.open('https://milano-pizzeria-duisburg.dev/', '_blank', 'noopener,noreferrer') },
     { icon: '🌐', label: 'Toggle Language (AR/EN)', key: 'lang_toggle', action: () => { toggleLang(); closeCmdk(); } }
 ];
 
@@ -2063,13 +2065,6 @@ document.querySelectorAll('.section, .stat, .tl-item, .tech-card, .reveal').forE
 function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('open'); }
 function closeMenu() { document.getElementById('mobileMenu').classList.remove('open'); }
 
-window.addEventListener('scroll', () => {
-    document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
-    const btn = document.getElementById('scrollTop');
-    if (window.scrollY > 400) btn.classList.add('show');
-    else btn.classList.remove('show');
-});
-
 document.getElementById('scrollTop').addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
@@ -2079,10 +2074,15 @@ document.getElementById('scrollTop').addEventListener('click', () => {
    ============================================================ */
 const heroImage = document.getElementById('heroImageFrame');
 if (heroImage && window.matchMedia('(min-width: 901px)').matches) {
+    let parallaxRafId = null;
     document.addEventListener('mousemove', (e) => {
-        const x = (e.clientX / window.innerWidth - 0.5) * 10;
-        const y = (e.clientY / window.innerHeight - 0.5) * 10;
-        heroImage.style.transform = `translate(${x}px, ${y}px)`;
+        if (parallaxRafId) return;
+        parallaxRafId = requestAnimationFrame(() => {
+            const x = (e.clientX / window.innerWidth - 0.5) * 10;
+            const y = (e.clientY / window.innerHeight - 0.5) * 10;
+            heroImage.style.transform = `translate(${x}px, ${y}px)`;
+            parallaxRafId = null;
+        });
     });
 }
 
@@ -2090,7 +2090,7 @@ if (heroImage && window.matchMedia('(min-width: 901px)').matches) {
    QR CODE
    ============================================================ */
 const qrData = {
-    site: { url: 'https://mohamadali91345.github.io/portfolioo/', label: '🔗 mohamadali91345.github.io/portfolioo' },
+    site: { url: 'https://choumar.is-a.dev/', label: '🔗 choumar.is-a.dev' },
     vcard: {
         url: 'BEGIN:VCARD\nVERSION:3.0\nFN:Mohamad Ali Choumar\nN:Choumar;Mohamad Ali;;\nTITLE:Software Engineering Student\nEMAIL:choumarmohamadali@gmail.com\nTEL:+4915752123177\nURL:https://github.com/mohamadali91345\nADR:Duisburg;Germany\nEND:VCARD',
         label: '👤 Mohamad Ali Choumar · vCard'
@@ -2126,9 +2126,18 @@ window.addEventListener('load', () => {
     setTimeout(() => renderQR('site'), 800);
 });
 
+let toastTimer = null;
+function showToast(message) {
+    const toast = document.getElementById('toast');
+    toast.textContent = message;
+    toast.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => toast.classList.remove('show'), 2600);
+}
+
 function downloadQR() {
     const canvas = document.querySelector('#qrcode canvas');
-    if (!canvas) { alert('QR is still generating, please try again.'); return; }
+    if (!canvas) { showToast('QR is still generating, please try again.'); return; }
     const a = document.createElement('a');
     a.download = 'mohamadali-' + currentQR + '-qr.png';
     a.href = canvas.toDataURL('image/png');
