@@ -1,6 +1,6 @@
 # 👋 Hi, I'm Mohamad Ali Choumar
 
-## Software Engineering Student | Frontend Developer
+## Software Engineering Student | Full-Stack Developer
 
 Welcome to my personal portfolio repository.
 
@@ -18,19 +18,18 @@ This website showcases my projects, technical skills, and experience as a Softwa
 - Skills Overview
 - Contact Section
 - Custom Domain
-  
 
 ## 🛠 Tech Stack
 
 <p align="left">
-  <img src="https://skillicons.dev/icons?i=html,css,js,react,git,github,vscode,npm" />
+  <img src="https://skillicons.dev/icons?i=java,spring,react,nextjs,ts,js,postgres,mysql,docker,git,github,vscode" />
 </p>
 
 ## 📂 Featured Projects
 
 ### 🍕 Milano Pizzeria
 
-Modern restaurant website for a real restaurant in Germany.
+Full-stack restaurant platform built for a real client — online ordering, WhatsApp API-based table reservations, and Stripe payments. Live in production.
 
 🌐 https://milano-pizzeria-duisburg.dev
 
@@ -44,9 +43,9 @@ Modern portfolio showcasing projects, skills and experience.
 
 ## 🎯 Goals
 
-- Build modern, responsive web applications.
-- Continuously improve frontend development skills.
-- Learn backend technologies and full-stack development.
+- Build real, production-ready full-stack applications.
+- Deepen backend expertise (Java, Spring Boot, databases, cloud).
+- Keep growing frontend and UI/UX skills.
 - Contribute to open-source projects.
 
 ## 📫 Contact
